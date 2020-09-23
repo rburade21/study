@@ -82,7 +82,8 @@ A class that have no name is known as anonymous inner class in java. It should b
 1. Class (may be abstract or concrete).
 2. Interface
 * Local inner class
-A class i.e. created inside a method is called local inner class in java. If you want to invoke the methods of local inner class, you must instantiate this class inside the method.
+A class i.e. created inside a method is called local inner class in java. 
+If you want to invoke the methods of local inner class, you must instantiate this class inside the method.
 2. Static nested class
 A static class i.e. created inside a class is called static nested class in java. It cannot access non-static data members and methods. It can be accessed by outer class name.
 * It can access static data members of outer class including private.
