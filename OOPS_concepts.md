@@ -187,7 +187,6 @@ Structural programming refers to the traditional method of programming, which is
 ### 26. What are the limitations of inheritance?
 
 The inheritance requires more processing time for the programs as it has to navigate various classes during execution. Due to inheritance, the parent and child class are tightly coupled. When any changes are needed in the logic, it may require changes in both parent and child classes. 
-
 If the inheritance is not correctly implemented, it can lead to undesired results. 
 
 ### 28. How do you explain the difference between overloading and overriding?
@@ -201,3 +200,5 @@ An exception is an event raised during a program execution caused by undesirable
 ### 30. Should you always use Object-oriented programming? Are there any limitations of Object-oriented programming?
 
 Though object-oriented programming offers many advantages, it has some disadvantages too. First of all, it has a steep learning curve compared to procedural programming. It may take a while to get used to thinking and program in terms of objects for many people. Secondly, it may take more experience to design a program in terms of objects. Using OOPs concepts for smaller programming tasks may not be efficient. 
+
+[Core Java ->](https://github.com/rburade21/study/blob/master/core_java.md)
