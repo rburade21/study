@@ -119,3 +119,84 @@ The operators that cannot be overloaded are:
 Member Selection
 Scope Resolution
 Member selection through a pointer to a function
+
+### 15. What are manipulators?
+
+Manipulators are the functions which can be used in conjunction with the insertion (<<) and extraction (>>) operators on an object. Examples are endl and setw
+
+### 16. What is an Inline function?
+
+An inline function is a technique used by the compilers and instructs to insert complete body of the function wherever that function is used in the program source code.
+
+### 17. What is a virtual function?
+
+A virtual function is a member function of a class, and its functionality can be overridden in its derived class. This function can be implemented by using a keyword called virtual, and it can be given during function declaration.
+
+A virtual function can be declared using a token(virtual) in C++. It can be achieved in C/Python Language by using function pointers or pointers to function.
+
+### 18. What is a friend function?
+
+A friend function is a friend of a class that is allowed to access to Public, private, or protected data in that same class. If the function is defined outside the class cannot access such information.
+
+A friend can be declared anywhere in the class declaration, and it cannot be affected by access control keywords like private, public, or protected.
+### 19. What are the various types of constructors?
+
+There are three types of constructors:
+
+–  Default Constructor – With no parameters.
+
+–  Parametric Constructor – With Parameters. Create a new instance of a class and also passing arguments simultaneously.
+
+–  Copy Constructor – Which creates a new object as a copy of an existing object.
+
+### 20. What are all the operators that cannot be overloaded?
+
+Following are the operators that cannot be overloaded -.
+
+Scope Resolution (::)
+Member Selection (.)
+Member selection through a pointer to function (.*)
+
+### 21. What is static and dynamic Binding?
+
+Binding is nothing but the association of a name with the class. Static Binding is a binding in which name can be associated with the class during compilation time, and it is also called as early Binding.
+
+Dynamic Binding is a binding in which name can be associated with the class during execution time, and it is also called as Late Binding.
+
+### 22. Which keyword can be used for overloading?
+
+Operator keyword is used for overloading.
+### 23. What is Object-oriented programming?
+
+This is the most basic OOPs interview question. Your answer should be: 
+
+Object-Oriented Programming refers to the programming paradigm defined using objects instead of only functions and methods. The objects contain data, called fields or attributes, and methods that provide the logic or supporting code. It provides capabilities such as inheritance, polymorphism, encapsulation, abstraction.
+### 24. What are the advantages of Object-oriented programming?
+
+Problems of any level of complexity can be supported by object-oriented programming.
+Highly complex problems can be handled by object-oriented programming
+It provides an efficient mechanism for code reuse using inheritance which reduces redundancy 
+It provides a mechanism for hiding data
+It is based on a bottom-up approach
+It offers flexibility through polymorphism 
+It improves maintainability of the code
+### 25. What is Structural programming?
+
+Structural programming refers to the traditional method of programming, which is based on functions. The overall program logic is divided into functions to provide a logical structure. It is based on a top-down approach. Structural programming is suitable for easy to moderately complex problems. 
+### 26. What are the limitations of inheritance?
+
+The inheritance requires more processing time for the programs as it has to navigate various classes during execution. Due to inheritance, the parent and child class are tightly coupled. When any changes are needed in the logic, it may require changes in both parent and child classes. 
+
+If the inheritance is not correctly implemented, it can lead to undesired results. 
+
+### 28. How do you explain the difference between overloading and overriding?
+
+Overloading a method means that multiple methods share the same method name but have different arguments. However, in the case of the overriding, the child class can redefine the implementation of a method by retaining the same arguments. Another difference is that the overloading is resolved at compile-time while overriding is resolved at run time.
+
+### 29. What is meant by an exception?
+
+An exception is an event raised during a program execution caused by undesirable input or a condition that prevents further processing. An exception causes an interruption in the program’s normal execution and must be handled via exception handling logic to avoid the program’s termination
+
+### 30. Should you always use Object-oriented programming? Are there any limitations of Object-oriented programming?
+
+Though object-oriented programming offers many advantages, it has some disadvantages too. First of all, it has a steep learning curve compared to procedural programming. It may take a while to get used to thinking and program in terms of objects for many people. Secondly, it may take more experience to design a program in terms of objects. Using OOPs concepts for smaller programming tasks may not be efficient. 
