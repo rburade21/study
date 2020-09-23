@@ -26,6 +26,44 @@ There are 8 types of primitive data types:
 * float data type
 * double data type
 
+### Static Keyword
+The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, methods, blocks and nested classes. The static keyword belongs to the class than an instance of the class.
+
+The static can be:
+
+1] Variable (also known as a class variable) - 
+The static variable can be used to refer to the common property of all objects, The static variable gets memory only once in the class area at the time of class loading.
+
+2]  Method (also known as a class method) - 
+If you apply static keyword with any method, it is known as static method.
+
+* A static method belongs to the class rather than the object of a class.
+* A static method can be invoked without the need for creating an instance of a class.
+* A static method can access static data member and can change the value of it.
+
+3] Block - 
+* Is used to initialize the static data member.
+* It is executed before the main method at the time of classloading.
+
+4] Nested class
+
+### Abstract class 
+
+Points to Remember
+An abstract class must be declared with an abstract keyword.
+* It can have abstract and non-abstract methods.
+* It cannot be instantiated.
+* It can have constructors and static methods also.
+* It can have final methods which will force the subclass not to change the body of the method.
+* Abstract class can have final, non-final, static and non-static variables.
+* Abstract class can provide the implementation of interface.
+
+### Interface
+
+Java Interface also represents the IS-A relationship. It cannot be instantiated just like the abstract class.
+* Since Java 8, we can have default and static methods in an interface.
+* Since Java 9, we can have private methods in an interface.
+* Interface has only static and final variables.
 
 ### Questions
 
@@ -63,5 +101,10 @@ Method overriding is one of the ways in which Java supports Runtime Polymorphism
 
 #### What is object cloning?
 The object cloning is a way to create an exact copy of an object. For this purpose, the clone() method of an object class is used to clone an object
- 
+
+#### Why is the Java main method static?
+It is because the object is not required to call a static method. If it were a non-static method, JVM creates an object first then call main() method that will lead the problem of extra memory allocation
+
+
+
 [Advance Java ->](https://github.com/rburade21/study/blob/master/advance_java.md)
