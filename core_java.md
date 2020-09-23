@@ -65,6 +65,31 @@ Java Interface also represents the IS-A relationship. It cannot be instantiated 
 * Since Java 9, we can have private methods in an interface.
 * Interface has only static and final variables.
 
+
+### Java Inner Classes
+Java inner class or nested class is a class which is declared inside the class or interface.
+We use inner classes to logically group classes and interfaces in one place so that it can be more readable and maintainable.
+Additionally, it can access all the members of outer class including private data members and methods.
+
+### Types of Nested classes
+There are two types of nested classes non-static and static nested classes.The non-static nested classes are also known as inner classes.
+
+1. Non-static nested class (inner class)
+* Member inner class
+A non-static class that is created inside a class but outside a method is called member inner class.
+* Anonymous inner class
+A class that have no name is known as anonymous inner class in java. It should be used if you have to override method of class or interface. Java Anonymous inner class can be created by two ways:
+1. Class (may be abstract or concrete).
+2. Interface
+* Local inner class
+A class i.e. created inside a method is called local inner class in java. If you want to invoke the methods of local inner class, you must instantiate this class inside the method.
+2. Static nested class
+A static class i.e. created inside a class is called static nested class in java. It cannot access non-static data members and methods. It can be accessed by outer class name.
+* It can access static data members of outer class including private.
+* Static nested class cannot access non-static (instance) data member or method.
+
+
+
 ### Questions
 
 #### Can we overload the main method?
@@ -104,6 +129,21 @@ The object cloning is a way to create an exact copy of an object. For this purpo
 
 #### Why is the Java main method static?
 It is because the object is not required to call a static method. If it were a non-static method, JVM creates an object first then call main() method that will lead the problem of extra memory allocation
+
+#### when finally block may not executed?
+If the JVM exits while the try or catch code is being executed, then the finally block may not execute. Likewise, if the thread executing the try or catch code is interrupted or killed, the finally block may not execute even though the application as a whole continues
+
+#### Can we access the non-final local variable inside the local inner class ?
+Yes, we can access the local final variables using the method local inner class because the final variables are stored on the heap and live as long as the method local inner class object may live
+
+#### How to access the static nested class ?
+like static class methods, a static nested class cannot refer directly to instance variables or methods defined in its enclosing class: it can use them only through an object reference. They are accessed using the enclosing class name. To instantiate an inner class, you must first instantiate the outer class
+
+#### Can we define an interface within the class ?
+Yes, you can define an interface inside a class and it is known as a nested interface. You can't access a nested interface directly; you need to access (implement) the nested interface using the inner class or by using the name of the class holding this nested interface.
+
+#### Can we define a class within the interface?
+Yes, you can define a class inside an interface. In general, if the methods of the interface use this class and if we are not using it anywhere else we will declare a class within an interface
 
 
 
