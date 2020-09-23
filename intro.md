@@ -9,4 +9,6 @@ In meantime i keep upgrading my tech skills by learning new things, be it react.
 # Projects
 
 
+[OOPs Concepts ->](https://github.com/rburade21/study/blob/master/OOPS_concepts.md)
+
 
