@@ -1,3 +1,5 @@
+## Core JAVA and OOPS
+
 ### Explain JDK, JRE and JVM
 JVM core engine of JRE responsible to run java program and which uses libraries provided in java runtime. so we can call it as subset of JRE
 JRE is resposible to provide runtime environmet while executing java program. it contains JVM and some libraries required by JVM.
@@ -67,6 +69,8 @@ we need no make contructor private and write private static feild of that class,
 ### Can we overload main method?
 Yes we can overload method, but jvm calls only main method having signature like public static void main(String args[])
 
+## Advance Java
+
 ### What is JDBC how to connect with database?
 JDBC is bridge to connect java applications with database
 It has some steps.
@@ -79,6 +83,9 @@ It has some steps.
 
 ### What is depedancy injection?
 Dependancy injection is what we can call it as design pattern where spring container creates and inject the depedancies all over the code. so that developer need not to creeat object for those depedancies. we need to specify beans and autowire the depedancies wherever we need and spring container find those beans and creates object for us and inject it in our code.
+
+### What is IOC?
+It is a technique which spring container follows. traditionally we have been creating objects by our own which is very tedious job. so what spring controller does is it takes this control to handle these object in its own way. this is what we call as inversion control.
 
 ### Whart are scopes of beans?
 By defalut scope of beans is singleton, we can change it to prototype, session, reuqeust and global by spcifying scope in bean xml or by using @Scope("prototype")
@@ -95,6 +102,9 @@ I have used spring security for security and used jwt based authentication, for 
 
 ### What is difference between @Component and @Bean?
 Targeted result can be achived using both but the difference i found is that, @Component can be used with class and @Bean can be used with methods.
+
+
+## Hibernate
 
 ### What is ORM?
 Object relational mapping is used to store java object to the database, so class is mapped with table and its properties are mapped as columns in table.
