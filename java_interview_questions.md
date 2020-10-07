@@ -19,7 +19,23 @@ No, its not pure object oriented language as it has primitive types which counte
 example: Smalltalk is pure OOPL
 
 ### What are all data types in java?
-java has data types like short, int, string, boolean, float, long, double, byte.
+java has data types like short, int, string, boolean, float, long, double, byte
+
+### What is super in java?
+super is keyword used to point object of immidiate parent class. whenever you create object of subclass it implicitly creates object of parent class supper keyword points to this object.
+
+### Can you have virtual functions in Java?
+Yes, All functions in java are virtual by default.
+
+### What is a nested class?
+The nested class can be defined as the class which is defined inside another class or interface. We use the nested class to logically group classes and interfaces in one place so that it can be more readable and maintainable. A nested class can access all the data members of the outer class including private data members and methods.
+
+### What are the disadvantages of using inner classes?
+Inner classes increase the total number of classes used by the developer and therefore increases the workload of JVM since it has to perform some routine operations for those extra classes which result in slower performance.
+IDEs provide less support to the inner classes as compare to the top level classes and therefore it annoys the developers while working with inner classes.
+
+### Can we access the non-final local variable, inside the local inner class?
+No, it must be constant to access.
 
 ### Explain OOPS concepts in briefly.
 There are four oops concepts as
@@ -81,6 +97,55 @@ It has some steps.
 5. execute query
 6. fetch results and process the data
 
+### What is the life-cycle of a servlet?
+Servlet is loaded
+servlet is instantiated
+servlet is initialized
+service the request
+servlet is destroyed
+
+### Lifcycle methods of servlets?
+public void init(ServletConfig config)	It is invoked only once when first request comes for the servlet. It is used to initialize the servlet.
+public void service(ServletRequest request,ServletResponse)throws ServletException,IOException	It is invoked at each request.The service() method is used to service the request.
+public void destroy()	It is invoked only once when servlet is unloaded.
+
+### Difference between forward() method and sendRedirect() method ?
+forward() method	sendRedirect() method
+1) forward() sends the same request to another resource.	1) sendRedirect() method sends new request always because it uses the URL bar of the browser.
+2) forward() method works at server side.	2) sendRedirect() method works at client side.
+3) forward() method works within the server only.	3) sendRedirect() method works within and outside the server.
+
+### What are the life-cycle methods for a JSP?
+public void jspInit()	It is invoked only once, same as init method of the servlet.
+public void _jspService(ServletRequest request,ServletResponse)throws ServletException,IOException	It is invoked at each request, same as service() method of the servlet.
+public void jspDestroy()	It is invoked only once, same as destroy() method of the servlet.
+
+### What are the JSP implicit objects?
+1) out	JspWriter
+2) request	HttpServletRequest
+3) response	HttpServletResponse
+4) config	ServletConfig
+5) session	HttpSession
+6) application	ServletContext
+7) pageContext	PageContext
+8) page	Object
+9) exception	Throwable
+
+### What is Spring?
+Its is framework of java to design enterprise application.
+
+### What are the advantages of spring framework?
+Predefined Templates
+Loose Coupling
+Easy to test
+Lightweight
+Fast Development
+Powerful Abstraction
+Declarative support
+
+### What is the difference between BeanFactory and ApplicationContext?
+BeanFactory is the basic container whereas ApplicationContext is the advanced container. ApplicationContext extends the BeanFactory interface. ApplicationContext provides more facilities than BeanFactory such as integration with spring AOP, message resource handling for i18n
+
 ### What is depedancy injection?
 Dependancy injection is what we can call it as design pattern where spring container creates and inject the depedancies all over the code. so that developer need not to creeat object for those depedancies. we need to specify beans and autowire the depedancies wherever we need and spring container find those beans and creates object for us and inject it in our code.
 
@@ -88,11 +153,25 @@ Dependancy injection is what we can call it as design pattern where spring conta
 It is a technique which spring container follows. traditionally we have been creating objects by our own which is very tedious job. so what spring controller does is it takes this control to handle these object in its own way. this is what we call as inversion control.
 
 ### Whart are scopes of beans?
-By defalut scope of beans is singleton, we can change it to prototype, session, reuqeust and global by spcifying scope in bean xml or by using @Scope("prototype")
+By defalut scope of beans is singleton, we can change it to prototype, session, reuqeust and global by spcifying scope in bean xml or by using @Scope("prototype"), global
+1)	singleton	The bean instance will be only once and same instance will be returned by the IOC container. It is the default scope.
+2)	prototype	The bean instance will be created each time when requested.
+3)	request	The bean instance will be created per HTTP request.
+4)	session	The bean instance will be created per HTTP session.
+5)	globalsession	The bean instance will be created per HTTP global session. It can be used in portlet context only.
 
 ### What is work flow of spring MVC?
 
 Whenever clients make request with perticuar path it goes to dispature survlet so whenever any request comes dispacture servlet is resopnsible to process that request further thats why we call it as fron- controller. so what it does is passes to respective controller and their method. when data and view name recived by the controller method it passes that data and view name to the view resolver. so view resolver populates data into view and return path to view after appending and prefixing paths and extensions and that view then served to the client by dispature servlet.
+
+### What is the front controller class of Spring MVC?
+Dispature Servlet is called as front controller which is responsible to handel all client requests
+
+### What does @Controller annotation?
+This annotation is used to mark it as controller class
+
+### What does @RequestMapping annotation?
+It is used to map the url with controller method
 
 ### What is webservice and why we need web services?
 Webservices is way to interact with homogenious or hetrogenious systems be it deffirent applications or any home automation sytem part.
@@ -102,7 +181,6 @@ I have used spring security for security and used jwt based authentication, for 
 
 ### What is difference between @Component and @Bean?
 Targeted result can be achived using both but the difference i found is that, @Component can be used with class and @Bean can be used with methods.
-
 
 ## Hibernate
 
@@ -129,8 +207,20 @@ hibernate have two caches as level 1 and level 2 cache.
 by default level 1 cache is enabled which is session scope and developer dont have to control over it. we need to enable level 2 cache using hibernate configuration properties and use tools like echcache, OScache, Swam etc. level 2 cache called as global because they share data among different session.
 Also we need to mark classes with @Cacheable explicitly
 
+### What is the difference between session.save() and session.persist() method?
+save() - returns the identifier (Serializable) of the instance.	
+persist() - Return nothing because its return type is void.
+
+### What is the difference between get and load method?
+1)	Returns null if an object is not found.	Throws ObjectNotFoundException if an object is not found.
+2)	get() method always hit the database.	load() method doesn't hit the database.
+3)	It returns the real object, not the proxy.	It returns proxy object.
+4)	It should be used if you are not sure about the existence of instance.	It should be used if you are sure that instance exists.
+
 ### What is JPA?
 JPA is specifiaction for interaction with ORM tools.
+
+
 
 
 
