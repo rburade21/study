@@ -196,7 +196,7 @@ OneToMany, ManyToOne, OneToOne and ManyToMany
 ### What are states of object in hibernate?
 Transient, Persisted and detached
 
-## What are fetch policies present in hibernate?
+### What are fetch policies present in hibernate?
 There are two, One is lazy by default and egger.
 
 ### How do manage transaction in hibernate?
